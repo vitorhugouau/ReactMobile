@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "ReactMobile",
-    "slug": "ReactMobile",
+    "name": "my-app",
+    "slug": "my-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "reactmobile",
+    "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
