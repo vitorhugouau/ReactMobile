@@ -9,6 +9,7 @@ import FatherFunction from './../../pages/ex4/FatherFunction';
 import List from './../../pages/ex5/List';
 import Axios from './../../pages/ex6/Axios';
 import Buscar from './../../pages/ex7/Buscar';
+import Veiculos from './../../pages/ex8/Veiculos';
 
 export default function TabLayout() {
   const [tab, setTab] = useState('');
@@ -29,6 +30,8 @@ export default function TabLayout() {
         return <Axios />
       case 'Buscar':
         return <Buscar/>
+      case 'Veiculos':
+        return <Veiculos/>
       default:
         return <Calculator />
     }
