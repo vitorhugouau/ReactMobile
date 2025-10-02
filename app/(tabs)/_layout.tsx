@@ -10,6 +10,7 @@ import List from './../../pages/ex5/List';
 import Axios from './../../pages/ex6/Axios';
 import Buscar from './../../pages/ex7/Buscar';
 import Veiculos from './../../pages/ex8/Veiculos';
+import Marvel from './../../pages/ex9/Marvel';
 
 export default function TabLayout() {
   const [tab, setTab] = useState('');
@@ -29,37 +30,39 @@ export default function TabLayout() {
       case 'Axios':
         return <Axios />
       case 'Buscar':
-        return <Buscar/>
+        return <Buscar />
       case 'Veiculos':
-        return <Veiculos/>
+        return <Veiculos />
+      case 'Marvel':
+        return <Marvel />
       default:
         return <Calculator />
     }
   };
 
   return (
-  <View style={styles.container}>
-    <View style={styles.contentContainer}>
-      {getComponentByTab()}
-    </View>
+    <View style={styles.container}>
+      <View style={styles.contentContainer}>
+        {getComponentByTab()}
+      </View>
 
-    <View style={styles.tabBarContainer}>
-      <Tab setTab={setTab} />
+      <View style={styles.tabBarContainer}>
+        <Tab setTab={setTab} />
+      </View>
     </View>
-  </View>
-);
+  );
 
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f2f2f7', 
+    backgroundColor: '#f2f2f7',
   },
   contentContainer: {
     flex: 1,
     padding: 16,
-    paddingBottom: 80, 
+    paddingBottom: 80,
   },
   tabBarContainer: {
     position: 'absolute',
