@@ -3,15 +3,16 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 const Tab = ({ setTab }) => {
   const exercicios = [
-    // { title: "Calculadora", id: 1 },
     // { title: "Estilo e Layout", id: 2 },
     // { title: "Props", id: 3 },
     // { title: "Função Pai", id: 4 },
     // { title: "Lista", id: 5 },
     // { title: "Axios", id: 6 },
+    { title: "Calculadora", id: 1 },
     { title: "Buscar", id: 7},
     { title: "Veiculos", id: 8},
     { title: "Marvel", id: 9},
+    { title: "Navigation", id: 10 }
   ];
 
   const [abaAtiva, setAbaAtiva] = useState(1);

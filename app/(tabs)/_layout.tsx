@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 
 import { StyleSheet, View } from 'react-native';
 import Tab from './../../components/Tab';
-import Calculator from './../../pages/ex1/Calculator';
 import StyleAndLayout from './../../pages/ex2/StyleAndLayout';
-import Props from './../../pages/ex3/Props';
+import Calculator from '../../pages/ex3/Calculadora';
 import FatherFunction from './../../pages/ex4/FatherFunction';
 import List from './../../pages/ex5/List';
 import Axios from './../../pages/ex6/Axios';
 import Buscar from './../../pages/ex7/Buscar';
 import Veiculos from './../../pages/ex8/Veiculos';
 import Marvel from './../../pages/ex9/Marvel';
+import NavigationScreen from './../../pages/ex10/NavigationScreen';
 
 export default function TabLayout() {
   const [tab, setTab] = useState('');
@@ -21,8 +21,6 @@ export default function TabLayout() {
         return <Calculator />;
       case 'Estilo e Layout':
         return <StyleAndLayout />;
-      case 'Props':
-        return <Props />;
       case 'Função Pai':
         return <FatherFunction />;
       case 'Lista':
@@ -35,8 +33,10 @@ export default function TabLayout() {
         return <Veiculos />
       case 'Marvel':
         return <Marvel />
+      case 'Navigation':
+        return <NavigationScreen />;
       default:
-        return <Calculator />
+        return <StyleAndLayout />
     }
   };
 
