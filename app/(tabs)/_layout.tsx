@@ -11,6 +11,7 @@ import Buscar from './../../pages/ex7/Buscar';
 import Veiculos from './../../pages/ex8/Veiculos';
 import Marvel from './../../pages/ex9/Marvel';
 import NavigationScreen from './../../pages/ex10/NavigationScreen';
+import NavigationHeroesScreen from './../../pages/ex11/NavigationHeroesScreen';
 
 export default function TabLayout() {
   const [tab, setTab] = useState('');
@@ -35,6 +36,8 @@ export default function TabLayout() {
         return <Marvel />
       case 'Navigation':
         return <NavigationScreen />;
+      case 'HomeHerois':
+        return <NavigationHeroesScreen />;
       default:
         return <StyleAndLayout />
     }

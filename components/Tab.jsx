@@ -12,7 +12,8 @@ const Tab = ({ setTab }) => {
     { title: "Buscar", id: 7},
     { title: "Veiculos", id: 8},
     { title: "Marvel", id: 9},
-    { title: "Navigation", id: 10 }
+    { title: "Navigation", id: 10 },
+    { title: "HomeHerois", id: 11 },
   ];
 
   const [abaAtiva, setAbaAtiva] = useState(1);
