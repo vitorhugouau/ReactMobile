@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 
 const Tab = ({ setTab }) => {
   const exercicios = [
@@ -24,15 +25,23 @@ const Tab = ({ setTab }) => {
         {exercicios.map((exercicio) => (
           <TouchableOpacity
             key={exercicio.id}
+            activeOpacity={0.8}
             style={[
               styles.tabButton,
               abaAtiva === exercicio.id && styles.activeTab,
+              { shadowOpacity: abaAtiva === exercicio.id ? 0.25 : 0.1 },
             ]}
             onPress={() => {
-                setAbaAtiva(exercicio.id);
-                setTab(exercicio.title)
+              setAbaAtiva(exercicio.id);
+              setTab(exercicio.title);
             }}
           >
+            <Ionicons
+              name={exercicio.icon}
+              size={18}
+              color={abaAtiva === exercicio.id ? "#fff" : "#4b7bec"}
+              style={{ marginBottom: 2 }}
+            />
             <Text
               style={[
                 styles.tabText,
@@ -52,44 +61,42 @@ export default Tab;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#f8f9fa",
-    justifyContent: "space-between",
-  },
-  content: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  title: {
-    fontSize: 22,
-    fontWeight: "600",
-    color: "#333",
+    backgroundColor: "#f2f4f7",
+    paddingVertical: 10,
   },
   tabBar: {
     flexDirection: "row",
     flexWrap: "wrap",
-    justifyContent: "space-around",
-    paddingVertical: 12,
-    backgroundColor: "#fff",
-    borderTopWidth: 1,
-    borderTopColor: "#ccc",
+    justifyContent: "center",
+    paddingHorizontal: 8,
+    gap: 10,
   },
   tabButton: {
-    paddingHorizontal: 12,
-    paddingVertical: 8,
-    borderRadius: 10,
-    backgroundColor: "#eee",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#fff",
+    paddingVertical: 10,
+    paddingHorizontal: 16,
+    borderRadius: 14,
     margin: 4,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.15,
+    shadowRadius: 3,
+    elevation: 3,
+    transition: "all 0.2s ease",
   },
   tabText: {
-    fontSize: 14,
-    color: "#555",
+    fontSize: 13,
+    fontWeight: "600",
+    color: "#4b7bec",
   },
   activeTab: {
     backgroundColor: "#4b7bec",
+    shadowColor: "#4b7bec",
+    elevation: 5,
   },
   activeTabText: {
     color: "#fff",
-    fontWeight: "bold",
   },
 });

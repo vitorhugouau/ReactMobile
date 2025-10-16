@@ -130,81 +130,88 @@ const HomeHerois = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        padding: 15,
-        backgroundColor: "#121212",
-    },
-    header: {
-        fontSize: 26,
-        fontWeight: "bold",
-        textAlign: "center",
-        marginBottom: 20,
-        color: "#fff",
-        letterSpacing: 1,
-    },
-    searchContainer: {
-        flexDirection: "row",
-        marginBottom: 20,
-        gap: 10,
-    },
-    input: {
-        flex: 1,
-        backgroundColor: "#1E1E1E",
-        color: "#fff",
-        borderRadius: 12,
-        paddingHorizontal: 15,
-        paddingVertical: 10,
-        fontSize: 16,
-        borderWidth: 1,
-        borderColor: "#333",
-    },
-    button: {
-        justifyContent: "center",
-        backgroundColor: "#E62429",
-        borderRadius: 12,
-        paddingHorizontal: 10,
-    },
-    card: {
-        marginBottom: 15,
-        borderRadius: 16,
-        overflow: "hidden",
-        backgroundColor: "#1E1E1E",
-        elevation: 4,
-    },
-    cardImage: {
-        height: 200,
-    },
-    cardTitle: {
-        color: "#fff",
-        fontSize: 18,
-        fontWeight: "bold",
-        marginTop: 10,
-    },
-    cardText: {
-        color: "#bbb",
-        marginTop: 5,
-    },
-    error: {
-        color: "#E62429",
-        textAlign: "center",
-        marginTop: 20,
-    },
-    empty: {
-        textAlign: "center",
-        marginTop: 20,
-        fontSize: 16,
-        color: "#aaa",
-    },
-    buttonCards: {
-        marginTop: 10,
-        backgroundColor: "#E62429",
-        borderRadius: 8,
-        marginBottom: 10,
-    },
-    buttonCardsColor: {
-        color: "#fff",
-    }
+  container: {
+    flex: 1,
+    padding: 15,
+  },
+  header: {
+    fontSize: 32,
+    fontWeight: "900",
+    textAlign: "center",
+    marginBottom: 20,
+    color: "#fff",
+    textTransform: "uppercase",
+    letterSpacing: 3,
+  },
+  searchContainer: {
+    flexDirection: "row",
+    marginBottom: 20,
+    gap: 10,
+  },
+  input: {
+    flex: 1,
+    backgroundColor: "#1E1E1E",
+    color: "#fff",
+    borderRadius: 16,
+    paddingHorizontal: 15,
+    paddingVertical: 10,
+    fontSize: 16,
+    borderWidth: 1,
+    borderColor: "#E62429",
+  },
+  button: {
+    justifyContent: "center",
+    backgroundColor: "#E62429",
+    borderRadius: 25,
+    paddingHorizontal: 20,
+    shadowColor: "#E62429",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.8,
+    shadowRadius: 6,
+    elevation: 6,
+  },
+  card: {
+    marginBottom: 20,
+    borderRadius: 18,
+    overflow: "hidden",
+    backgroundColor: "#1E1E1E",
+    elevation: 6,
+    borderWidth: 1,
+    borderColor: "#E62429",
+  },
+  cardImage: {
+    height: 240,
+  },
+  overlay: {
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+    right: 0,
+    padding: 12,
+  },
+  cardTitle: {
+    color: "#fff",
+    fontSize: 20,
+    fontWeight: "bold",
+    marginTop: 8,
+    letterSpacing: 1,
+  },
+  cardText: {
+    color: "#ddd",
+    marginTop: 6,
+    lineHeight: 20,
+  },
+  error: {
+    color: "#E62429",
+    textAlign: "center",
+    marginTop: 20,
+  },
+  empty: {
+    textAlign: "center",
+    marginTop: 20,
+    fontSize: 16,
+    color: "#aaa",
+  },
 });
 
 export default HomeHerois;
